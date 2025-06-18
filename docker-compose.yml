@@ -6,7 +6,7 @@ services:
     container_name: p2p-video-api
     restart: unless-stopped
     expose:
-      - "6000"  
+      - "3000"  
     environment:
       - NODE_ENV=production
     networks:
