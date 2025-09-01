@@ -8,8 +8,6 @@ RUN apk add --no-cache \
     bash \
     curl
 
-WORKDIR /usr/src/app
-
 RUN git clone https://bitbucket.org/pcmporto/api-p2p-video-chat.git . || \
     { echo "Falha ao clonar repositório"; exit 1; }
 
@@ -25,3 +23,4 @@ HEALTHCHECK --interval=30s --timeout=3s \
 EXPOSE 3000
 
 CMD ["npm", "start"]
+
